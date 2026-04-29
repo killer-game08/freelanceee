@@ -836,7 +836,7 @@ function renderServices() {
     }
 
     grid.innerHTML = toShow.map(s => `
-    <div class="service-card" onclick="location.href='${getCorrectPath('/assets/pages/usluga.html?id=' + s.id)}'">
+    <div class="service-card" onclick="location.href='${getCorrectPath('usluga.html?id=' + s.id)}'">
       <div class="card-author">
         <div class="avatar">${s.authorAvatar}</div>
         <div>
@@ -1315,7 +1315,7 @@ function updateFavoritesList(favorites) {
         <div class="favorite-title">${escapeHtml(fav.title)}</div>
         <div class="favorite-meta">${escapeHtml(fav.author)} · от ${fav.price.toLocaleString()} ₽</div>
       </div>
-      <button class="btn-open" onclick="window.location.href='${getCorrectPath('/assets/pages/usluga.html?id=' + fav.id)}'">Открыть</button>
+      <button class="btn-open" onclick="window.location.href='${getCorrectPath('usluga.html?id=' + fav.id)}'">Открыть</button>
     </div>
   `).join('');
 }
